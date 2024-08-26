@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>  
+
+<body>
+    <div class="container">
+        <div class="title">PRODUCT DETAIL</div>
+        <div class="detail">
+            <div class="image">
+                <img src="" alt="">
+            </div>
+            <div class="content">
+                <h1 class='name'></h1>
+                <div class="price"></div>
+                <div class="buttons">
+                    <button>CHECK OUT</button>
+                    <button>ADD TO CART <img src="images/social/icons8-add-to-cart-90.png" style="width: 10%;" alt=""></button>
+                </div>
+                <div class="description"></div>
+                <div class="reviewname"></div>
+                <div class="review"></div>
+            </div>
+        </div>
+    </div>    
+    <script>
+        // get data products in products.json
+        let products=null;
+        fetch('product.json')
+        .then(response=>response.json())
+        .then(data=>{
+            products=data;
+            showDetail()
+            // console.log(products);
+            // addDataToHtml()
+        });
+        // find this product
+        function showDetail(){
+            let detail=document.querySelector('.detail')
+            let productId=new URLSearchParams(window.location.search).get('id');
+            let thisproduct=products.filter(value=>{
+                return value.id==productId
+            })[0];
+            // if there is no product has id=productid
+            // => returns to homepage
+            if(thisproduct){
+                window.localStorage.href='/';
+            }
+                // and if has add this product in html
+                detail.querySelector('.image img').src=thisproduct.image
+                detail.querySelector('.name').innerText=thisproduct.name
+                detail.querySelector('.price').innerText=thisproduct.price
+                detail.querySelector('.description').innerText=thisproduct.description
+                detail.querySelector('.reviewname').innerHTML=thisproduct.review_name
+                detail.querySelector('.review').innerText=thisproduct.reviews
+            // add detail product similar
+            
+        }
+    </script>
+</body>
+</html>

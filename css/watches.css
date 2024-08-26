@@ -1,0 +1,191 @@
+
+#casio>img,#rolex>img{
+    width: 25rem;
+    text-align: center;
+    margin-left: -5rem;
+    margin-top: -6rem;
+}
+h2{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#smart>img{
+    margin-top: -2rem;
+}
+#casio>h2,#rolex>h2,#smart>h2{
+    margin-top: -1rem;
+}
+#casio>.img,#casio>.img{
+    margin-top: 1rem;
+    margin-left: -1rem;
+}
+#casio>.h2,#casio>.h2{
+    margin-top: -1rem;
+}
+
+#rolex>img{
+    width: 25rem;
+    text-align: center;
+    margin-left: -9rem;
+    
+}
+.filter{
+    margin-top: 2rem;
+}
+.cat_icon{
+    grid-template-columns:repeat(3, 130px);
+    margin-top: -2rem;
+}
+/*  for the  filter btn*/
+
+.filter_dropdown{
+    background: linear-gradient(to top right, #0ade0a,#9999ec);
+    color: #ffff;
+    /* border: none; */
+    border-radius: 7px;
+    padding: 0.45rem;
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+.dropdown{
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: 1rem;
+    
+}
+
+.dropdown_menu_filter{
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: 2rem;
+    display: none;
+}
+#filterrating{
+    background: linear-gradient(to top right, #3df53d,#9999ec);
+    color: #ffff;
+    /* border: none; */
+    border-radius: 7px;
+    padding: 0.45rem;
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+#filterprice{
+    background: linear-gradient(to top right, #3df53d,#9999ec);
+    /* border: none; */
+    border-radius: 7px;
+    padding: 0.45rem;
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+#filterbtn{
+    background: linear-gradient(to top right, #3df53d,#9999ec);
+    /* border: none; */
+    color: #ffff;
+    border-radius: 7px;
+    padding: 0.45rem;
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+.one>a>img{
+    margin-left: -6rem;
+}
+.one>a{
+    border: none;    
+    box-shadow: 0px 0px 4px 2px;
+    margin-top: -1rem;
+        text-decoration: none;
+        color: black;
+}
+
+/* begining of the cart navbar */
+.my_cart{
+    width: 29rem;
+    display: none;
+    background-color: #e2d8d8;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0.1px 0px 8px 2px #808080;
+    height: 200vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+    overflow-x: scroll;
+}
+.close_cart_menu>img{
+    margin-top: 37rem;
+    width: 2.3rem;
+}
+.container_cart{    
+    text-align: center;
+}
+
+.list{
+    
+    border: none;
+    margin-bottom: 1rem;    
+    margin-top: 1rem;
+}
+.emptytext{
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.deletecart1{
+    padding: 1rem;
+    padding-left: 4rem;
+}
+/* the div of each cart in watches */
+.cart_div_one{
+    background:#10de10;
+    box-shadow: 0px 0px 8px 1px;  
+    /* justify-content: space-between; */
+    width: 100%;
+    height: 7rem;
+    margin-bottom: 2rem;
+    padding: 0.8rem;
+}
+.cartfirstcontainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.first_cart_text{
+    width: 7rem;
+    margin-bottom: 1.2rem;
+}
+/* .first_cart_text:hover{
+    box-shadow: 0px 0px 8px 0px;
+} */
+.total{
+    width: 16rem;
+    padding: 1.2rem;
+    display: flex;
+    color: #1d1c1c;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #000000;
+    margin: 0px auto;
+}
+p{
+    color: #000000;
+}
+/* foer  the checl out btn */
+.cartcheckout{
+    background-color: #0ade0a;
+    width: 8rem;
+    border: none;
+    box-shadow: 0px 0px 3px 1px gray;
+    padding:0.5rem;
+    margin-bottom: 5rem;
+}
+.cartcheckout:hover{
+    /* background-color: #26ec26; */
+    
+    /* color: #646262;*/
+    opacity:87%;
+    box-shadow: 0px 0px 4px 2px #0a7e0a;
+}
+/* end of the cart nav bar */
+

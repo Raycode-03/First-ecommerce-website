@@ -1,0 +1,292 @@
+@media only screen and (min-width:1500px) {
+    .close_cart_menu>img{
+        margin-top: 47rem;  
+        
+    }
+}
+@media only screen and (max-width:1200px) {
+
+    header{
+        top:0;
+    }
+    /* begining of the navbar */
+    .logo_header{
+        padding-right: 5rem;
+
+    }
+    .menu>img{
+        width: 1rem;
+    }
+    .close>img,.close_menu>img{
+        display: block;
+        width: 2rem;
+        
+    }
+    .nav_list{
+        display: none;
+    }
+    .nav_list_menu{
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        /* text-align: center; */
+        top: 0;
+        right: 0px;
+        padding-top: 3rem;
+        padding-left: 1rem;
+        height: 100vh;
+        width:300px;
+        background-color: #0fab0f;
+        box-shadow: 0 40px 60px rgba(red, green, blue, 0.1);
+        z-index: 999;
+    }
+    .nav>ul>li{
+        display: block;
+        margin-bottom: 7px;
+    }
+    #nav_bar.active{
+        right: 0px;
+    }
+    .search_con{
+        background:#312f2f;
+        color:#312f2f;
+        width: 17rem;
+    }
+    .row>input{
+        color: #b9b9b9;
+        width: 13rem;
+    }
+    .row>button{
+        width: 3rem;
+        border: none;
+        box-shadow: 0px 0px 3px .1px white;
+    }
+    ::placeholder{
+        color: white;
+        font-size: medium;
+    }
+        /* for the menu bar btn */
+        .menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 3rem;
+        }
+        .menu>a>img{
+            width: 4rem;
+            display: inline-block;
+        }
+        .menu>img{
+            display: inline-block;
+            width: 6rem;
+            margin-right: 30px; 
+        }
+        .close_cart_menu>img{
+            margin-top: 33rem;
+        }
+    /* end of the navbar */
+    /* for the background image */
+    .back{
+        top:22rem;
+        width: 100%;
+        min-height: 615px;
+    }
+    /*  for the video */
+    .back>video{
+        width: 100%;
+        height: 500px;
+        object-fit: fill;
+        margin-top: 45rem;
+        
+    }
+    /* for the  deals image*/
+    #dealsforme>a>img{
+        display: grid;
+        grid-template-columns: repeat(auto auto);    
+        justify-content: space-evenly;
+        width: 20rem;
+    }
+    /*today's deals  */
+    .crazydeals{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+    }
+    
+    /* for the offical store images */
+    .hold{
+        display: flex;
+        grid-template-columns: auto auto;
+        
+    }
+    .logo{
+        display: none;
+        width:1.9rem;
+    }
+    .logo_needed{
+        display: block;
+        width:5rem;
+    }
+    .social>img{
+        width: 3rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    /* for the nav bar */
+    .my_cart{
+        padding-top: -2rem;
+    }
+
+    /* the welcome contianer */
+    .back{
+        font-size: x-large;
+        min-height: 460px;
+    }
+    /*  for the video */
+    .back>video{
+        object-fit: fill;
+        height: 22rem;
+        margin-top: 35rem;
+    }
+    #dealsforme{
+        display:block;
+        padding: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+    #dealsforme>a>img{
+        padding:1rem;
+        height: 20rem;
+        min-width: 23rem;
+        margin: 0 auto;
+    }
+/* for today deals */
+    .crazydeals{
+        display: block;
+        text-align: center;
+    }
+    .crazydeals>.deal{
+        margin: 0 auto;
+        padding: 2rem;
+        margin-bottom: 1rem;
+        margin-top:1rem;
+        height: 30rem;
+    }
+
+    .dealimg{
+        width:12rem;
+        padding-top: 1rem;
+    }
+
+/* for the animation */
+    .deal:hover{
+
+        transform: translateY(-10px);
+    }
+    
+    .hold{
+        display:inline-block;
+        text-align: center;
+    }
+    .os{
+        width: 27rem;        
+        text-align: center;
+        margin: 0 auto;
+        
+    }
+    
+
+    .logo_needed{
+        width: 5rem;
+        margin: 0 auto;
+    }
+    .btn_con{
+        width:20rem;
+        text-align: center;
+        margin:0 auto;
+    }
+    .btn_con>a>button>h2{
+        font-size: xx-small;
+    }
+}
+
+ /* @media screen and (max-width:500
+ .menu>a{
+     padding: 0.8rem;
+ }px){ */
+    /* to resize the menu bar */
+ /*}*/
+
+@media screen and (max-width:400px){
+    /* for the cart */
+    .menu{
+        margin-left: -7rem;
+        
+    }
+    .menu>a{
+        padding: 0.8rem;
+    }
+    .menu>button{
+        display: block;
+        width: 3rem;
+        padding: 1rem;
+        border: none;
+        box-shadow: 0px 0px 2px 1px #0fab0f;
+        margin-left: -10px;
+        
+    }
+    /* for the cart button */
+    .my_cart{
+        padding-top: -2rem;
+    }
+    /* to resize the background text */
+    .back{
+        font-size: medium;
+    }
+    
+    /* to resize dealsfor me */
+   #dealsforme>a>img{
+        width: 0px;
+        display: none;
+        /* width: 1rem; */
+        /* height: 1rem; */
+    }
+    
+    /*  to resize today's deals */
+    .crazydeals>.deal{
+        height:20rem;
+        text-align: center;
+        width:13rem;
+    }
+    .crazydeals>.deals>h2{
+        font-size: small;
+        width: 2rem;
+    }
+    
+    .dealimg{
+        width:6rem;
+    }
+    .dealtext{
+        font-size: small;
+    }
+    i{
+        
+        
+        font-size: x-small;
+    }
+    .price>i{
+        font-size: small;
+    }
+    .price>h4{
+        font-size: x-small;
+    }
+    /* to resize the download btn at the footer */
+    .btn_con{
+        width: 100%;
+      }  
+}
+

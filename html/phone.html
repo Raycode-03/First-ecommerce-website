@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/phone.css">
+    <link rel="icon" href="../images/logo/kh-new-logo.png">
+    <title>KongaHub</title>
+
+</head>
+<body>
+    <header>
+        <!-- the logo of the company -->
+        <div class="logo">
+            <a href="../html/index.html"><img src="../images/logo/kh-new-logo.png" alt="" style="width: 11rem;"></a>
+        </div>
+        <!-- nav links -->
+        <div class="nav">
+            <ul>
+                 <li><a href="../html/index.html">Deals</a></li>
+                 <li><a href="../html/watches.html">Watches</a></li>
+                 <li><a href="../html/sound.html">Accessories</a></li>
+                 <li><a href="../html/playstation.html">PlayStaion</a></li>
+                 <li><a href="../html/laptop.html">Laptops</a></li>
+                <li><a href="../html/phone.html" class="active">Phones</a></li>
+
+            </ul>
+        </div>
+        <!-- search button -->
+        <div class="search">
+            <div class="row">
+            <input type="search"placeholder="Search for products, brands and categories..." id="input-box" autocomplete="off">
+            <button class="btn_search"><img src="../images/social/icons8-search-50.png" alt=""></button>
+            </div>
+            <div class="result-box">
+                <!-- <ul>
+                    <li>fff</li>
+                 <li>hhhh</li>
+                    <li>botrooeo</li>
+                    <li>water</li>
+                    <li>getee</li>
+                </ul> -->
+            </div>
+        </div>
+        <!-- cart link -->
+        <div class="cart">
+            <a href="cart.html"><img src="../images/logo/cart-images-removebg-preview.png" alt="" style="width: 5rem;"></a>
+            <span class="quantity">0</span>
+        </div>
+    </header>
+
+<!-- to pick and show the type of phone one wants -->
+    <main>
+        <h1>Category</h1>
+        <div class="cat_icon">
+        
+            <button class="hidden" class="box" id='phone_btn'onclick="filterobject('phone')"><img src="../images/logo/phone_icon.png" alt="" style="width:60px;" >Phone</button>
+            <button class="hidden" class="box"id="charger_btn" onclick="filterobject('charger')"><img src="../images/logo/chaarger_icon.png" alt="" style="width:60px;">Charger</button>
+            <button class="hidden"class="box"id="headset_btn"onclick="filterobject('headset')"><img src="../images/logo/headset_icon.png" alt=""style="width: 60px;">Headset</button>
+            <button class="hidden"class="box"id="gadget_btn" onclick="filterobject('gadget')"><img src="../images/logo/powerbank_icon.png" alt="" style="width: 60px;">Gadgets</button>
+        </div>
+
+    <!-- to select the phone and add to cart -->
+    <section id="phone_container">
+
+        <!-- for phone -->
+        
+        <div class="one">
+            <div class="box phone phone_add_cart hidden"id="phones">
+                <img src="../images/phones/Apple_Iphone_12_Pro_6.1_inch_-removebg-preview.png" alt=""class="hidden cart_img">
+                <h2 class="cart_text">Apple_Iphone_12_Pro <br> _6.1_inch_</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4 class="cart_amount">₦210,999</h4>
+                    </div>
+                <form action="#" method="POST" class="cart_container con_cart" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="cart_add_one" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box phone phone_add_cart hidden"id="phones">
+                <img src="../images/phones/Apple_Iphone_13_Pro_6.1_inch_Supper_Retina_XDR_Display-removebg-preview.png" alt=""class="hidden">
+                <h2>Apple_Iphone_13_Pro_ <br>6.1_inch_ Supper_Retina <br> _XDR_Display</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦400,999</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="cart_add_one" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box phone phone_add_cart hidden"id="phones">
+                <img src="../images/phones/Apple_Iphone_15_Pro_max-removebg-preview.png" alt=""class="hidden">
+                <h2>Apple Iphone 15 Pro max <br> 512gb-Nano Sim-Blue Titanium</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦2,000,999</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="cart_add_one"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- charger -->
+            <div class="box charger charger_add_cart hidden"id="chargers">
+                <img src="../images/accessories/itel PowerLite 20000mAh 15W Fast Charger Type C Mobile Power   ₦ 14,938 .jpg" alt=""class="hidden">
+                <h2>itel PowerLite 20000mAh 15W <br> Fast Charger  Type C<br> Mobile Power </h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 14,938 </h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            
+            <div class="box charger charger_add_cart hidden"id="chargers">
+                <img src="../images/accessories/Oraimo PowerGaN 33W Super Speed UK Type 2interface Charger+cable 12,580 .jpg" alt=""class="hidden" style="width:15rem;">
+                <h2>Oraimo PowerGaN 33W Super <br> Speed  UK Type 2interface <br> Charger+cable</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 12,580 </h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+
+
+            <div class="box charger charger_add_cart hidden"id="chargers">
+                <img src="../images/accessories/Xiaomi Redmi 33W Wall Charger EU (Type A+ Type C).jpg" alt=""class="hidden" style="width:16rem;">
+                <h2>Xiaomi Redmi 33W Wall <br> Charger EU  (Type A+<br> Type C)</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 12,580 </h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- for headset -->
+            <div class="box headset headset_add_cart hidden"id="headsets">
+                <img src="../images/accessories/Bluetooth Earphone True Wireless Air Buds3 Headset - Black.  ₦ 7,790.jpg" alt=""class="hidden" style="width:15rem;">
+                <h2>Bluetooth Earphone True <br> Wireless Air Buds3 <br> Headset - Black.</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 7,790</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+
+            <div class="box headset headset_add_cart hidden" id="headsets">
+                <img src="../images/accessories/F9 Fingerprint Touch Bluetooth Earphone Earbuds 2200mAH 5400.jpg" alt=""class="hidden" style="width:15rem;">
+                <h2>F9 Fingerprint Touch Blue<br>tooth Earphone Earbuds<br> 2200mAH</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 5,400</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- for gadgets -->
+            
+            <div class="box gadget gadget_add_cart hidden" id="gadgets">
+                <img src="../images/accessories/itel PowerLite 20000mAh 15W Fast Charger Type C Mobile Power   ₦ 14,938 .jpg" alt=""class="hidden" style="width:15rem;">
+                <h2>itel PowerLite 20000mAh <br> 15W Fast Charger <br> Type C Mobile Power</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 14,938</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+
+            <div class="box gadget gadget_add_cart hidden" id="gadgets">
+                <img src="../images/accessories/Memorycard 3000 .jpg" alt=""class="hidden" style="width:15rem;">
+                <h2>Memory Card</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 6,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- second container -->
+        <div class="one">
+
+
+            <div class="box phone phone_add_cart hidden" id="phones">
+                <img src="../images/phones/Sumsung_Galaxy_S23_Ultra_S918U-removebg-preview.png" alt=""class="hidden">    
+                <h2>Sumsung_Galaxy_S23_ <br>Ultra_S918U</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦1,700,999</h4>
+                    </div>
+                <form action="#" method="POST" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box phone phone_add_cart hidden"id="phones">
+                <img src="../images/phones/Sumsung_Galaxy_S24_Ultra__Dual_Sim-removebg-preview.png" alt=""class="hidden">     
+                <h2>Samsung Galaxy S24 Ultra  Dual Sim <br> -12GB RAM -512GB-5G Black</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦1,899000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box phone phone_add_cart hidden" id='phones'>
+                <img src="../images/phones/Redmi note 13 pro.png" alt="" class="hidden redmi">
+                <h2> Xiaomi Redmi note 13 pro 6GB ROM <br>Android </h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐</i>
+                    <h4>₦143,999</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+
+            <!-- charger part -->
+            <div class="box charger charger_add_cart hidden" id="chargers">
+                <img src="../images/accessories/50 W Dual type-c lighting super  fast original charger for iPhone   5,999.jpg" alt=""class="hidden">
+                <h2>50 W Dual type-c lighting super <br> fast original charger for iPhone</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦5,999</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+            
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box charger charger_add_cart hidden"id="chargers">
+                <img src="../images/accessories/XIAOMI USB-C to Lightning Cable for Apple Iphone 1M.jpg" alt=""class="hidden" style="width: 15rem;">
+                <h2>XIAOMI USB-C to Lightning <br> Cable for Apple Iphone 1M</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦12,999</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+            
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box charger charger_add_cart hidden" id="chargers">
+                <img src="../images/accessories/XIAOMI USB-C to Lightning Cable for Apple Iphone 1M.jpg" alt=""class="hidden" style="width: 15rem;">
+                <h2>XIAOMI USB-C to Lightning <br> Cable for Apple Iphone 1M</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦12,999</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+            
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- for headset -->
+            <div class="box headset headset_add_cart hidden" id="headsets">
+                <img src="../images/accessories/P47 Wireless Bluetooth Headphones, FM Radio, MP3, Sd Card  ₦ 5,650.jpg" alt=""class="hidden" style="width:15rem;">
+                <h2>P47 Wireless Bluetooth <br> Headphones,  FM Radio, MP3, <br> Sd Card </h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 5,650</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box headset headset_add_cart hidden" id="headsets">
+                <img src="../images/accessories/Sony WH1000XM4 Wireless Noise Cancelling Stereo Headset - Black  ₦ 344,350.jpg" alt=""class="hidden" style="width:15rem">
+                <h2>Sony WH1000XM4 Wireless <br> Noise Cancelling Stereo <br> Headset - Black  </h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4> ₦ 344,350</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- for gadgets -->
+            <div class="box gadget gadget_add_cart hidden"  id="gadgets">
+                <img src="../images/accessories/M card 14700.jpg" alt=""class="hidden" style="width:15rem;">
+                <h2>Memory Card</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 21,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box gadget gadget_add_cart hidden"  id="gadgets">
+                <img src="../images/accessories/Phone standHolder.jpg" alt=""class="hidden" style="width:15rem;">
+                <h2>Phone Stand</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 8,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+        </div>
+        <!-- third container -->
+        <div class="one">
+            <div class="box phone phone_add_cart hidden" id="phones">
+                <img src="../images/phones/Xiaomi_Redmi_A3_6.71-removebg-preview.png" alt=""class="hidden">     
+                <h2>Xiaomi_Redmi_A3_6.71</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦190,999</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box phone phone_add_cart hidden" id="phones">
+                <img src="../images/phones/Infinix smart 8 6.6 4gb Ram 128gb RomAndriod TGo-Black.jpg" alt="" class="hidden">
+                <h2>Infinix Smart 8 6.6" 4GB RAM/128GB ROM Android T Go - Black </h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐</i>
+                    <h4>₦120,999</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box phone phone_add_cart hidden" id="phones">
+                <img src="../images/phones/Infinix smart 8 6.6 4gb Ram 128gb RomAndriod TGo-Black.jpg" alt="" class="hidden">
+                <h2>Infinix Smart 8 6.6" 4GB RAM/128GB ROM Android T Go - Black </h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐</i>
+                    <h4>₦120,999</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- charger -->
+            <div class="box charger charger_add_cart  hidden" id="chargers">
+                <img src="../images/accessories/Magsafe IPhone 12 Wireless Charger 1213 PRO MAX Magnet  20,245.jpg" alt=""class="hidden">
+                <h2>Magsafe IPhone 12 Wireless <br> Charger 1213 <br> PRO MAX Magnet</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦20,245</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box charger charger_add_cart  hidden" id="chargers">
+                <img src="../images/accessories/XIAOMI USB-C Cable100cm cable.jpg" alt=""class="hidden" style="width: 15rem;">
+                <h2>XIAOMI USB-C Cable100cm <br> cable</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦6,245</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box charger charger_add_cart hidden" id='chargers'>
+                <img src="../images/accessories/XIAOMI USB-C to Lightning Cable for Apple Iphone 1M.jpg" alt=""class="hidden" style="width: 15rem;">
+                <h2>XIAOMI USB-C to Lightning <br> Cable for Apple Iphone 1M</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦12,999</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+            
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+
+    
+            <!-- for headset -->
+            <div class="box headset headset_add_cart hidden" id="headsets">
+                <img src="../images/accessories/Wireless Earphones Bluetooth 5.3 Slide Cover Long Life   ₦ 5,380.jpg" alt=""class="hidden" style="width:15rem;">
+                <h2>Wireless Earphones Blue<br>tooth 5.3 Slide Cover Long<br> Life</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 5,380</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+
+            <div class="box headset headset_add_cart hidden" id="headsets">
+                <img src="../images/accessories/m10 bluetooth headset.jpg" alt=""class="hidden" style="width:15rem;">
+                <h2>M10 Bluetooth Headset</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 5,380</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- for gadgets -->
+            <div class="box gadget gadget_add_cart hidden" id="gadgets">
+                <img src="../images/accessories/Selfie stick 12000.jpg" alt=""class="hidden" style="width:15rem;">
+                <h2>Selfie Stick</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 12,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box gadget gadget_add_cart hidden"  id="gadgets">
+                <img src="../images/accessories/Selfie stick 7000.jpg" alt=""class="hidden" style="width:15rem;">
+                <h2>Selfie Stick</h2>
+                <div class="price">
+                    <i>⭐⭐⭐⭐⭐</i>
+                    <h4>₦ 7,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+        </div>
+        
+        
+
+
+        
+    </section>
+    <script src="../js/index.js"></script>
+    <script src="../js/phone.js"></script>
+    <script src="../js/cart.js"></script>
+</main>
+</body>
+</html>

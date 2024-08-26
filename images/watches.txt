@@ -1,0 +1,21 @@
+<a href="">
+                <img src="../images/accessories/Men Luxury Waterproof Chain Watch Silver Gold.webp" alt="">
+                <h1>Men Luxury Waterproof Chain Watch Silver Gold</h1>
+                <p>#15,800</p>
+            </a>
+            <a href="">
+                <img src="../images/accessories/Casio MTP-
+                <h1>Casio MTP-W500D-1AVDF</h1>
+                <p>#126,330</p>
+
+            </a>
+
+                <img src="../images/accessories/Casio GM-B2100GD-5ADR.webp" alt="">
+                <h1>Casio GM-B2100GD-5ADR</h1>
+                <p>#814,190</p>
+            </a> 
+
+                <img src="../images/accessories/Series 6 Watch 6 Pro Max Smartwatch(GPS, 44mm).webp" 
+                    <h1>Series 6 Watch 6 Pro Max Smartwatch(GPS, 44mm)</h1>
+                    <p>#86,938</p>
+                </a> 

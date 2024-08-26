@@ -1,0 +1,23 @@
+@media screen and (max-width:500px){
+    body{
+        font-size: small;
+    }
+    *{
+        top: 0;
+        margin:0;
+        padding: 0;
+    }
+    image{
+        display: block;
+        width: 12rem;
+    }    
+    input{
+        width: 12rem;
+    }
+    button{
+        width: 12rem;
+    }
+    
+    
+}
+

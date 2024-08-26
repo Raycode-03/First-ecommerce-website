@@ -1,0 +1,310 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    padding-top:7rem;
+}
+h2{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.logo>img{
+    width: 60px;
+    padding-right:3rem;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:fixed;
+    top:0;
+    width: 100%;
+    box-shadow: 0px 2px 6px 1px #0fab0f;
+    border: 1rem;
+    height: 7rem;
+    background:linear-gradient(to right, #10de10,#5aea5a); 
+    /* z-index to make sure it stays there and nothing hovers above it */
+    z-index: 999;
+}   
+
+.nav>ul>li{
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: 500;
+    
+}
+li>a{
+    text-decoration: none;
+    text-shadow: 0px 0.5px 1px black ;
+    color: #000000;
+}
+li>a.focus{
+    color: #3f2ec0;
+    
+}
+li>a:hover{
+    text-shadow: 0px 0px 4px black ;
+    /* color: #45e181; */
+    color:#ffffff;
+
+}
+.active{
+    color: #3f2ec0;
+    
+}
+li>.phonelist{
+    border: 2em solid black;
+    border-bottom: #de820a;
+    
+}
+/*  for the search button */
+.search{
+    width: 400px;
+    height:3rem;
+    /* max-height: 3rem; */
+    /* margin-top: 7rem; */
+    background-color: #ffffff;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+    border-bottom-left-radius:none;
+    border-bottom-right-radius:none;
+    
+} 
+.row{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    
+}
+#input-box{
+    flex:1;
+    height:30px;
+    background: transparent;
+    border:0;
+    outline: 0;
+    font-size: 18px;
+    
+}
+::placeholder{
+    color: #424242;
+}
+.result-box{
+    max-height:200px;
+    overflow-y:scroll;
+
+}
+.result-box>ul{
+    border-top: 1px solid #999;
+    padding: 15px 10px;
+    margin-top:-0.16rem;
+    background-color: #ffffff;
+    border-bottom-left-radius:0.6rem;
+    border-bottom-right-radius:0.6rem;
+}
+.result-box>ul>li{
+    list-style: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.result-box>ul>li:hover{
+    background:#dcdbdb;
+}
+.btn_search{
+    background-color: #188ab8;
+    border: none;
+    box-shadow: 0px 0px 2px 1px;
+    width: 36px;
+
+}
+.btn_search>img{
+    width: 22px;
+    
+}
+/*  for number on the img cart */
+.quantity{
+    background-color: #000000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    position: absolute;
+    margin-top: -4rem;
+    left: 97%;
+    padding:3px 10px;
+
+}
+
+/* end of the header style */
+h1{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top:7.1rem;
+}
+/* for default buttons */
+
+.cat_icon{
+    top:0;
+    display: grid;
+    text-align: center;
+    grid-template-columns:repeat(4, 130px);
+    /* grid-template-rows: 0px; */
+    justify-content: space-evenly;
+    padding: 3rem;
+    
+}
+.cat_icon>button{
+    background: linear-gradient(to top right, #0ade0a,#9999ec);
+    /* border: none; */
+    border-radius: 7px;
+    font-size: x-large;
+}
+.cat_icon>button:hover{
+    animation: btn;
+    animation-duration: 10s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+}
+@keyframes btn{
+    0%{
+        background: linear-gradient(to top right, #0ade0a,#9999ec);
+    }
+    25%{
+        background: linear-gradient(to right, #0ade0a,#9999ec);
+    }
+    50%{
+        background: linear-gradient(to bottom right, #0ade0a,#9999ec);
+    }
+    70%{
+        background: linear-gradient(to bottom left, #0ade0a,#9999ec);
+    }
+    85%{
+        background: linear-gradient(to left, #0ade0a,#9999ec);
+    }
+    100%{
+        background: linear-gradient(to top left, #0ade0a,#9999ec);       
+    }
+}
+/* to transition the section */
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+}
+.box{
+    /* to hide the boxes that are not needed */
+    /*   */
+    display: none;
+}
+
+.show{
+    /* to transition a section when one scroll to it */
+   opacity:1;
+   
+}
+.showbox{
+    display: block;
+}
+
+
+/* for the phone_contianers */
+
+#phone_container{
+    display: flex;
+    justify-content: space-evenly;
+    
+    /* display: grid;
+    text-align: center;
+    grid-template-columns:repeat(3,3fr);
+    grid-row-gap: 2rem; */
+    padding: 2rem;
+}
+.phone_add_cart>img{
+    width:15rem;
+    text-align: center;
+    padding:2rem;
+}
+.charger_add_cart>img{
+    width:14rem;
+}
+
+
+.phone_add_cart,.charger_add_cart,.headset_add_cart,.gadget_add_cart{
+    border:none;
+    border-radius:9px;
+    box-shadow:0px 0px 19px 1px;
+    margin-bottom: 4rem;
+    height:33rem;
+    text-align: center;
+    width:18rem;
+    font-size:medium;
+    padding:2rem;
+    /* transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out; */
+
+}
+
+/* .phone_add_cart:hover,.charger_add_cart:hover,.headset_add_cart:hover,.gadget_add_cart:hover{   
+    transform: translateY(-30px);
+    
+    transition-delay: 2s;
+} */
+.price{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.cart_text{
+    margin-bottom: 1.7rem;
+}
+.cart_container{
+    margin-bottom: 2rem;
+}
+#iphone_13{
+    width: 3rem;
+    border-radius: 12px;
+    background-color: #0ade0a;
+    border: none;
+    padding: 0.2rem;
+    
+}
+#iphone:focus{
+    color: gray;
+    background-color: #3f2ec0;
+}
+
+.cart_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cart_add{
+    background-color: #0ade0a;
+    width: 8rem;
+    border: none;
+    box-shadow: 0px 0px 3px 1px gray;
+    padding:0.5rem;
+}
+.cart_add>img{
+    width: 22px;
+}
+.cart_add:hover{
+    background: linear-gradient(to right, #4dc6ff,#188ab8);
+}
+#phones>.redmi{
+    width: 22rem;
+    margin: 0px auto;
+    margin-left: -4rem;
+    margin-bottom: -2rem;
+    margin-top: -4rem;
+}
+
