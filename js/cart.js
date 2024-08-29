@@ -29,13 +29,17 @@ filterbtn_open.onclick=function(){
 // to call all the varibales needed
 let filter_btn=document.querySelector('#filterbtn').onclick=function rate_filter(){
     let filter_star=parseInt(document.querySelector('#filterrating').value);
-    let filter_price_min=document.querySelector('#filterprice').getAttribute('min');
-    let filter_price_max=document.querySelector('#filterprice').getAttribute('max');
+    let filter_price_min=document.querySelector('#filterpricemin').value
+    let filter_price_max=document.querySelector('#filterpricemax').value
+
 
         document.querySelectorAll('.box').forEach(item => {
             const itemRating = parseInt(item.getAttribute('data-rating'));
             const itemPrice = parseInt(item.getAttribute('data-price'));
-                if(itemRating == filter_star) {
+                if((itemRating == filter_star)&&(filter_price_min<=itemPrice && filter_price_max>=itemPrice)) {
+                // if (filter_price_max ||filter_price_min!='number'){
+                    //     alert('pls type in a number')
+                    // } 
                     item.style.display = '';
                 } else{
                     item.style.display = 'none';
@@ -156,7 +160,7 @@ function load_product() {
     addToCart('#rolex_add_one', '../images/watches/Rolex Datejust 36 ref.m126233-0037.png', 'Rolex Datejust 36', '26126400', '.option_rolex_one');
     addToCart('#rolex_add_two', '../images/watches/rolex subminer Date bluesy ref. m126613LB-0002.png', 'Rolex Subminer Date Bluesy', '20000000', '.option_rolex_two');
     addToCart('#rolex_add_three', '../images/watches/Rolex Cosmograph Daytona ref. m126503=0002.png', 'Rolex Cosmograph Daytona', '26000000', '.rolex_three');
-    addToCart('#rolex_add_four', '../images/watches/Rolex Day-Date 40 ref.m228206.png', 'Rolex Day-Date 40 ref.m228206', '89390000', '.rolex_four');
+    addToCart('#rolex_add_four', '../images/watches/Rolex Day-Date 40 ref.m228206.png', 'Rolex Day-Date 40', '89390000', '.rolex_four');
     addToCart('#rolex_add_five', '../images/watches/Rolex Daytona Platinum Edition ref.m116506-0002.png', 'Rolex Daytona Platinum Edition', '109460000', '.rolex_five');
 
     addToCart('#rolex_add_six', '../images/watches/Rolexx Sky-Dweller ref. m336933-0004.png', 'Rolex Sky-Dweller ', '25600000', '.rolex_six');

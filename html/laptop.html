@@ -1,1 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo/kh-new-logo.png">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/phone.css">
+    <link rel="stylesheet" href="../css/watches.css">
+    <link rel="stylesheet" href="../css/indexmedia.css">
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+    <title>KongaHub</title>
+</head>
+<body>
+    <header>
+        <!-- the logo of the company -->
+        <div class="logo_header">
+            <a href="../html/index.html"><img src="../images/logo/kh-new-logo.png" alt="" style="width: 11rem;"></a>
+        </div>
+        <div class="nav_list">
+        <!-- nav links -->
+        <div class="close">
+            <img src="../images/social/closebutton.jpg" alt="">
+        </div>
+        <div class="nav">
+            <ul class="nav_bar">
+                <li><a href="../html/index.html" >Deals</a></li>
+                <li><a href="../html/watches.html">Watches</a></li>
+                <li><a href="../html/playstation.html">PlayStaion</a></li>
+                <li><a href="../html/laptop.html"class="active">Laptops</a></li>
+                <li><a href="../html/phone.html">Phones</a></li>
 
+            </ul>
+        </div>
+        <!-- search button -->
+        <div class="search_con">
+            <div class="row">
+            <input type="search"placeholder="Search for products, brands and categories..." id="input-box" autocomplete="off">
+            <button class="btn_search"><img src="../images/social/icons8-search-50.png" alt=""></button>
+            </div>
+            <div class="result-box">
+                
+            </div>
+        </div>
+        <!-- cart link -->
+        <div class="cart">
+            <img src="../images/logo/cart-images-removebg-preview.png" alt="" style="width: 5rem;">
+            <span class="quantity">0</span>
+        </div>
+        
+    </div>
+    <div class="menu">
+        <img src="../images/logo/cart-images-removebg-preview.png" alt="" class="cart_2" style="margin: -1.3rem; width:6rem;">
+        <img src="../images/social/menu.png" alt="" id="menu_btn">
+        <div class="nav_list_menu">
+            <!-- nav links -->
+            <div class="close_menu">
+                <img src="../images/social/closebutton.jpg" alt="">
+            </div>
+            <div class="nav">
+                <ul class="nav_bar">
+                <li><a href="../html/index.html">Deals</a></li>
+                <li><a href="../html/watches.html">Watches</a></li>
+                <li><a href="../html/playstation.html">PlayStaion</a></li>
+                <li><a href="../html/laptop.html"class="active">Laptops</a></li>
+                <li><a href="../html/phone.html">Phones</a></li>
+    
+                </ul>
+            </div>
+            <!-- search button -->
+            <div class="search_con">
+                <div class="row">
+                <input type="search"placeholder="Search for products, brands and categories..." id="input-box_menu" autocomplete="off">
+                <button class="btn_search"><img src="../images/social/icons8-search-50.png" alt=""></button>
+                </div>
+                <div class="result-box_menu">
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="my_cart">
+        <div class="close_cart_menu">
+            <img src="../images/social/closebutton.jpg" alt="">
+        </div>
+        <div class="container_cart">
+            <div class="list"></div>
+            <h1 class="emptytext">Your Cart is Empty</h1>
+            <div class="cart_list"></div>
+
+            <div class="total">
+                <h3>Total</h3>
+                <div class="num"></div>
+            </div>
+            <button class="cartcheckout">Check Out</button>
+       </div>
+    </div>
+    </header>
+
+    <!-- to pick and show the type of watches one wants -->
+    <main>
+        <h1>Category</h1>
+        <!-- filter part of the page -->
+        <div class="filter"> 
+            <div class="dropdown">
+                <button class="filter_dropdown">Filter 🔽</button>
+            </div>
+            <div class="dropdown_menu_filter">
+                <div class="cat_icon">        
+                    <button class="hidden" class="box" id='phone_btn'onclick="filterobject('casio')">
+                        Asus</button>
+                    <button class="hidden" class='box'id="charger_btn" onclick="filterobject('rolex')">Apple</button>
+                    <button class="hidden"class='box' id="headset_btn" onclick="filterobject('smart')">Dell</button>
+                    <button class="hidden"class='box' id="headset_btn" onclick="filterobject('smart')">Lenozo</button>
+                    <button class="hidden"class='box' id="headset_btn" onclick="filterobject('smart')">Acer</button>
+                    <button class="hidden"class='box' id="headset_btn" onclick="filterobject('smart')"></button>
+                    <!-- <button class="hidden"id="gadget_btn" onclick="gadgets_only"><img src="../images/logo/powerbank_icon.png" alt="" style="width: 60px;">Gadgets</button> -->
+                    </div>
+                    
+                <select name="filterrating" id="filterrating">
+                    <option value="1">⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    
+                </select>
+                <!-- <select name="filterprice" id="filterprice">
+                    <option value="10000" min=5000 max=10000>5000-10000</option>
+                    <option value="50000" min=10001 max=50000>10,000-50,000</option>
+                    <option value="100000" min=50001 max=100000>50,000-100,000</option>
+                    <option value="200000" min=100001 max=200000>100,000-200,000</option>
+                    <option value="500000" min=200001 max=500000>200,000-500,000</option>
+                    <option value="1000000" min=500001 max=50000000>500,000-1,000,000</option>
+                </select> -->
+                <input type="number" placeholder="Min" id="filterpricemin">
+                <input type="number" placeholder="Max" id="filterpricemax">
+                <button id="filterbtn">Filter</button>
+            </div>
+    </div>
+    <!-- to select the watches add to cart -->
+    <section id="phone_container">
+
+        <!-- for casio -->
+        
+        <div class="one">
+            <!-- <div class="detail box casio"> </div>-->
+            <div class="box casio phone_add_cart hidden" data-rating="3" data-price="65680">
+                <!-- <a href="../html/detail.html" style="text-decoration: none; color: black;"> -->
+                <img src="../images/watches/CASIO AQ-230GA-9DHDF 65,680.png" alt=""class="hidden cart_one_img" style="width: 27rem;margin-left: -6rem; margin-top: -7rem;">
+                <h2 class="cart_text" style="margin-top: -3.5rem;">CASIO AQ-230GA-9DHDF</h2>
+                <div class="price">
+                    <i class="star">⭐⭐⭐</i>
+                    
+
+                    <h4 class="cart_amount">₦65,680</h4>
+                    </div>
+                <form action="#" method="POST" class="cart_container con_cart" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="option_one">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="cart_add_one"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            <!-- </a> -->
+            </div>
+           
+            <div class="box casio phone_add_cart hidden star5 p_3"id="casio" data-rating="3" data-price="55080">
+                <img src="../images/watches/CASIO LTP-1215A-1A2DF 55,080.png" alt=""class="hidden cart_one_img" >
+                <h2  class="cart_text">CASIO LTP-1215A-1A2DF</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦ 55,080</h4>
+                    </div>
+                <form action="#" method="post"  onsubmit="return false">
+                    <select name="num2" id="iphone_13" class="option_two">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="cart_add_two"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- rolex -->
+            <div class="box rolex phone_add_cart hidden"id="rolex" data-rating="5" data-price="26126400">
+                <img src="../images/watches/Rolex Datejust 36 ref.m126233-0037.png" alt=""class="hidden cart_one_img"style="width: 33rem;">
+                <h2 class="cart_text">Rolex Datejust 36 ref. m126233-0037 </h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐⭐</i>
+                    <h4 class="cart_amount">₦26,126,400</h4>
+                    </div>
+                <form action="#" method="POST" class="cart_container con_cart" onsubmit="return false">
+                    <select name="num" id="iphone_13"  class="option_rolex_one">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="rolex_add_one" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box rolex phone_add_cart hidden"id="rolex" data-rating="5" data-price="20000000">
+                <img src="../images/watches/rolex subminer Date bluesy ref. m126613LB-0002.png" alt=""class="hidden cart_one_img" style="width: 33rem;">
+                <h2 class="cart_text">Rolex Subminer Date Bluesy ref. m126613LB-0002</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦20,000,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="option_rolex_two">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="rolex_add_two" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- for smart watch -->
+            <div class="box smart phone_add_cart hidden"id="smart" data-rating="4" data-price="389000">
+                <img src="../images/watches/Apple Watch Series 7.png" alt=""class="hidden cart_one_img" style="width:18rem">
+                <h2 class="cart_text">Apple Watch Series 7</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐</i>
+                    <h4 class="cart_amount">₦389,000</h4>
+                    </div>
+                <form action="#" method="POST" class="cart_container con_cart" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="smart_one">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="smart_add_one" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box smart phone_add_cart hidden"id="smart" data-rating="4" data-price="469000">
+                <img src="../images/watches/Apple Watch SE 2nd Gen 40mm GPS.png" alt=""class="hidden cart_one_img"style="width:16rem">
+                <h2 class="cart_text">Apple Watch SE/ 2nd Gen 40mm GPS</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦469,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="smart_two">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="smart_add_two" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <div class="box smart phone_add_cart hidden"id="smart"data-rating="5" data-price="739000">
+                <img src="../images/watches/Apple Watch 9 GPS 45mm Midnight Aluminium Case with Midnight Sport Band.png" alt=""class="hidden cart_one_img"style="width:18rem">
+                <h2 class="cart_text">Apple Watch 9 GPS 45mm Midnight Aluminium Case</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦ 739,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="smart_three">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="smart_add_three"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            
+            <!-- end of the one div -->
+        </div>
+        <!-- for casio -->
+        
+        <div class="one">
+            <!-- for casio -->
+            <div class="box casio phone_add_cart hidden star5 p_3"id="casio" data-rating="3" data-price="47637">
+                <img src="../images/watches/casio mtp-v004l-1audf 52,930.png" alt=""class="hidden cart_one_img">
+                <h2 class="cart_text">CASIO MTP-v004l-1audf</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐</i>
+                    <h4 class='cart_amount'><span style="text-decoration: line-through; padding: 0.5rem; font-size: small;">₦52,930</span>₦47,637</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13"  class="option_three">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="cart_add_three" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+             <!-- casio -->
+             <div class="box casio charger_add_cart hidden"id="casio"data-rating="3" data-price="51970">
+                <img src="../images/watches/CASIO LTP-V004L-1BUDF 51,970.png" alt=""class="hidden cart_one_img">
+                <h2 class="cart_text">CASIO LTP-V004L-1BUDF</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦51,970</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="option_four">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add '  id="cart_add_four" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            
+           <!-- end of casio -->
+           
+            <div class="box rolex phone_add_cart hidden"id="rolex"data-rating="5" data-price="26000000">
+                <img src="../images/watches/Rolex Cosmograph Daytona ref. m126503=0002.png" alt=""class="hidden cart_one_img" style="width:33rem">
+                <h2 class="cart_text" style="margin-top: -2.5rem;">Rolex Cosmograph Daytona ref. m126503-0002</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦ 26,000,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="rolex_three">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="rolex_add_three"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- charger -->
+           
+            <div class="box rolex charger_add_cart hidden"id="rolex"data-rating="5" data-price="89390000">
+                <img src="../images/watches/Rolex Day-Date 40 ref.m228206.png" alt=""class="hidden cart_one_img" style="width:33rem;">
+                <h2 class="h2 cart_text">Rolex Day-Date 40 ref.m228206</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦89,390,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="rolex_four">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="rolex_add_four" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- for headset -->
+            <div class="box rolex headset_add_cart hidden"id="rolex"data-rating="5" data-price="109460000">
+                <img src="../images/watches/Rolex Daytona Platinum Edition ref.m116506-0002.png" alt=""class="hidden cart_one_img" style="width:33rem;">
+                <h2 class="cart_text h2">Rolex Daytona Platinum Edition ref.m116506-0002</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦109,460,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="rolex_five">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="rolex_add_five" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            
+            <div class="box smart charger_add_cart hidden"id="smart"data-rating="4" data-price="469000">
+                <img src="../images/watches/Galaxy Watch7 (LTE, 4.0cm).png" alt=""class="hidden cart_one_img" style="width:16rem;">
+                <h2 class="h2 cart_text">Galaxy Watch7 (LTE, 4.0cm)</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦ 469,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="smart_four">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="smart_add_four" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- for headset -->
+            <div class="box smart headset_add_cart hidden"id="smart" data-rating="4" data-price="240000">
+                <img src="../images/watches/Sumsung Galaxy Watch5 Aluminium Smartwatch 44mm-silver.png" alt=""class="hidden cart_one_img" style="width:15rem">
+                <h2 class="h2 cart_text">Sumsung Galaxy Watch5 Aluminium Smartwatch</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦240,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="smart_five">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="smart_add_five" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- end of the one div -->
+        </div>
+        <!-- for casio -->
+        
+        <div class="one">
+            <div class="box casio charger_add_cart hidden"id="casio"data-rating="3" data-price="57470">
+                <img src="../images/watches/CASIO MTP-1303L-7BVDF 57,470.png" alt=""class="hidden cart_one_img" style="width:20rem;margin-top: -1.31rem;">
+                <h2 class="h2 cart_text">CASIO MTP-1303L-7BVDF</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦ 57,470</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="option_five">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="cart_add_five" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+
+
+            <div class="box casio charger_add_cart hidden"id="casio"data-rating="3" data-price="58390">
+                <img src="../images/watches/CASIO MTP-1314L-7AVDF  58,390.png" alt=""class="hidden cart_one_img" style="width:20rem; margin-top: -1.51rem;">
+                <h2 class="h2 cart_text">CASIO MTP-1314L-7AVDF</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦ 58,390</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="option_six">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="cart_add_six" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- for headset -->
+            <div class="box casio headset_add_cart hidden"id="casio"data-rating="5" data-price="97460">
+                <img src="../images/watches/CASIO MTP-1384L-1AVDF 97,460.png" alt=""class="hidden cart_one_img">
+                <h2 class="h2 cart_text">CASIO MTP-1384L-1AVDF</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦97,460</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="option_seven">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="cart_add_seven" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            <!-- end of casio -->
+            <!-- for rolex -->
+            <div class="box rolex charger_add_cart hidden"id="rolex"data-rating="5" data-price="25600000">
+                <img src="../images/watches/Rolexx Sky-Dweller ref. m336933-0004.png" alt=""class="hidden cart_one_img" style="width:33rem;">
+                <h2 class="cart_text">Rolex Sky-Dweller ref. m336933-0004</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦25,600,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="rolex_six">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="rolex_add_six" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            
+            <div class="box rolex charger_add_cart hidden"id="rolex"data-rating="5" data-price="51470000">
+                <img src="../images/watches/Rolex Day-Date 40 ref.m228238-0059.png" alt=""class="hidden cart_one_img" style="width:33rem;">
+                <h2 class="h2 cart_text">Rolex Day-Date 40 ref.m228238-0059</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦ 51,470,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="rolex_seven">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="rolex_add_seven" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+
+
+           
+            <!-- charger -->
+            <div class="box smart charger_add_cart hidden"id="smart"data-rating="5" data-price="1399000">
+                <img src="../images/watches/Apple Watch Ultra 2 Titanium Case with Apline Loop-Blue.png" alt=""class="hidden cart_one_img">
+                <h2 class="cart_text">Apple Watch Ultra 2 Titanium Case with Apline Loop-Blue</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦1,399,000</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="smart_six">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="smart_add_six" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+            
+            <div class="box smart charger_add_cart hidden"id="smart"data-rating="4" data-price="113345">
+                <img src="../images/watches/Oraimo Watch ES 1.78 AMOLED SCREEN GPS BLUETOOTH  CALL IP68 113,345.png" alt=""class="hidden cart_one_img" style="width:15rem;">
+                <h2 class="h2 cart_text">Oraimo Watch ES 1.78 AMOLED SCREEN GPS BLUETOOTH</h2>
+                <div class="price">
+                    <i class='star'>⭐⭐⭐⭐</i>
+                    <h4 class='cart_amount'>₦ 113,345</h4>
+                    </div>
+                <form action="#" method="post" class="cart_container" onsubmit="return false">
+                    <select name="num" id="iphone_13" class="smart_seven">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class='cart_add' id="smart_add_seven" onsubmit="add"><img src="../images/social/icons8-add-to-cart-90.png" alt=""></button>
+                </form>
+            </div>
+
+
+            <!-- end of the one div -->
+        </div>    
+    </section>
+<script src="../js/cart.js"></script>
+<script src="../js/search_bar.js"></script>
+<script src="../js/phone.js"></script>
+</body>
+</html>
